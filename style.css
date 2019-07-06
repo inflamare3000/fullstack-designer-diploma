@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Fira Sans", Arial, sans-serif;
-  src: url(fonts/FiraSans-Regular.woff);
+  src: url(fonts/FiraSans-Regular.ttf);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Fira Sans", Arial, sans-serif;
-  src: url(fonts/FiraSans-Bold.woff);
+  src: url(fonts/FiraSans-Bold.ttf);
   font-weight: 800;
   font-style: normal;
 }
@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-body, a, nav, ul, li, h1, h2, h3, h4, span, p, button {
+body, a, nav, ul, li, h1, h2, h3, h4, span, p, button, form, input {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -32,10 +32,9 @@ body {
   min-width: 360px;
 }
 
-a {
+a, p, h4 {
   color: rgb(73, 72, 72);
 }
-
 
 .main-header {
   background-color: #deeaff;
@@ -171,19 +170,21 @@ a {
 
 
 .order-button {
-  width: 150px;
-  height: 44px;
-  background: #DEEAFF;
-  background: linear-gradient(to top right, rgb(64, 117,252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72) )   ;
+  background: linear-gradient(to top right, rgb(64, 117,252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72));
   color: #ffffff;
   font-family: "Fira Sans", Arial, sans-serif;
   border: none;
   border-radius: 45px;
+}
 
+.order-button:hover {
+  background-color: #2567C7
 }
 
 @media (max-width: 640px) {
   .order-button {
+    width: 150px;
+    height: 44px;
     font-size: 14px;
   }
 }
@@ -337,7 +338,10 @@ h3 {
 .steps-title,
 .step-title,
 .feedbacks-title,
-.feedback-name {
+.feedback-name,
+.advantages-title,
+.footer-title,
+.footer-text {
   text-align: center;
 }
 
@@ -439,7 +443,7 @@ h3 {
   background-color: #DEEAFF;
 }
 
-.icon {
+.step-icon {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -463,6 +467,10 @@ h3 {
     padding-bottom: 20px;
   }
 
+   .step:last-child {
+     margin-bottom: 0;
+   }
+
   .step-title {
     font-size: 18px;
     font-weight: bold;
@@ -470,7 +478,7 @@ h3 {
 
   }
 
-  .icon {
+  .step-icon {
     width: 64px;
     height: 50px;
     margin-bottom: 20px;
@@ -487,14 +495,14 @@ h3 {
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  .icon {
+  .step-icon {
     width: 75px;
     height: 70px;
   }
 }
 
 @media (min-width: 961px) {
-  .icon {
+  .step-icon {
     width: 110px;
     height: 80px;
   }
@@ -520,3 +528,270 @@ h3 {
     margin-bottom: 30px;
    }
 }
+
+.advantages {
+  background-image: url(img/background640.jpg);
+  padding-top: 30px;
+  padding-right: 45px;
+  padding-left: 45px;
+ }
+
+.advantages-title {
+  color: #000000;
+}
+
+.advantage-name,
+.advantage-description{
+  color: #000000;
+}
+
+
+.advantage-icon {
+  fill: #575252;
+  flex: none;
+}
+
+@media (max-width: 640px) {
+  .advantages {
+    min-height: 653px;
+  }
+
+  .advantages-title {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .advantage-name {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .advantage-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 17px;
+  }
+
+  .wrapper-like {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .wrapper-like:nth-child(4) {
+    margin-bottom: 50px;
+  }
+
+  .wrapper-like:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.subscribe {
+  background-color: rgba(255, 204, 196, 0.12);
+}
+
+.subscribe-icon {
+  fill: #F2933B;
+  opacity: 0.51;
+}
+
+.subscribe-title {
+  font-weight: bold;
+}
+
+.wrapper-check {
+  display: flex;
+}
+
+.form-row {
+  border: none;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: #494848;
+}
+
+.form-row:focus {
+   box-shadow: 0 0 3px #0000ff;
+}
+
+@media (max-width: 640px) {
+  .subscribe {
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .subscribe-text {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    width: 68%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+
+  .subscribe-title {
+    width: 85%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .subscribe-icon {
+    width: 30px;
+    height: 30px;
+    flex: none;
+    margin-right: 17px;
+  }
+
+  .subscribe-description {
+    width: 80%;
+  }
+
+  .wrapper-check {
+    margin-bottom: 32px;
+  }
+
+  .form-row {
+    width: 310px;
+    height: 45px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    font-size: 15px;
+  }
+
+  .tel-hint. form-row
+  .email-hint. form-row {
+    margin-top: 26px;
+  }
+
+/*  .email-hint:last-child form-row(3) {*/
+/*    margin-bottom: 50px;*/
+/*}*/
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.subscribe-button {
+  border: none;
+  /*box-shadow: 0 0 3px #DEEAFF;*/
+  border-radius: 45px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color:#DEEAFF;
+  background: linear-gradient(to top right, rgb(64, 117,252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72));
+  }
+
+.subscribe-button:hover {
+  background-color: #2567C7;
+}
+
+@media (max-width: 640px) {
+  .subscribe-button {
+    width: 150px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .form-row {
+    width: 374px;
+    height: 58px;
+  }
+
+  .subscribe-button {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 961px) {
+  .form-row {
+    width: 515px;
+    height: 60px;
+  }
+
+  .subscribe-button {
+    width: 240px;
+    height: 52px;
+    font-size: 23px;
+  }
+}
+
+.main-footer {
+  background-color: rgba(37, 103, 199, 0.54);
+}
+
+.footer-icon {
+  fill: #ffffff;
+}
+
+.wrapper-footer-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .main-footer {
+    padding-top: 30px;
+    padding-bottom: 6px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .wrapper-footer-icons {
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    display: block;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+   .footer-text {
+     font-size: 16px;
+  }
+}
+
+@media (min-width: 961px) {
+  .footer-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-text {
+    font-size: 30px;
+  }
+}
+
