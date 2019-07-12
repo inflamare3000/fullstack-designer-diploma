@@ -521,6 +521,7 @@ h3 {
 
   .wrapper-products {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
@@ -1055,16 +1056,16 @@ h3 {
   }
 
    .wrapper-dislike > .advantage-description {
-    width: 74%;
+    width: 78%;
   }
 
   .wrapper-like > .advantage-description {
-    width: 65%;
+    width: 68%;
   }
 
   .wrapper-like {
     box-sizing: border-box;
-    padding-left: 105px;
+    padding-left: 186px;
   }
 
   .wrapper-like:first-child .advantage-description {
