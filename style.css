@@ -26,20 +26,17 @@ body, a, nav, ul, li, h1, h2, h3, h4, span, p, button, form, input {
   font-weight: normal;
   font-style: normal;
   list-style: none;
- }
+  color: rgb(73, 72, 72);
+}
 
 body {
   min-width: 360px;
 }
 
-a, p, h4 {
-  color: rgb(73, 72, 72);
-}
-
 .main-header {
   background-color: #deeaff;
   background-repeat: no-repeat;
- }
+}
 
 .wrapper-header {
   display: flex;
@@ -65,7 +62,7 @@ a, p, h4 {
     font-size: 10px;
   }
 
-   .menu {
+  .menu {
     display: none;
   }
 
@@ -114,6 +111,11 @@ a, p, h4 {
 
 .tel-number {
   font-size: 1.4em;
+  color: rgba(73, 72, 72, 0.8);
+}
+
+.tel-number:hover {
+  color: #2567C7;
 }
 
 .hamburger {
@@ -156,46 +158,41 @@ a, p, h4 {
     height: 170px;
   }
 
-  .menu ul {
-      display: flex;
-  }
-
   .menu {
     color: rgba(73, 72, 72, 0.8);
-    /*font-size: 23px;*/
     font-size: 1.4em;
     margin-left: auto;
-
   }
 
-  li {
+  .menu-list {
+    display: flex;
+  }
+
+  .menu-item:nth-child(n+2) {
     margin-left: 40px;
   }
 
-  li .menu-item {
-    margin-right: 0;
+  .menu-item:hover {
+    color: #2567C7;
+    text-decoration: underline;
   }
 
   .hamburger {
     display: none;
   }
-
-  .tel-number {
-    color: rgba(73, 72, 72, 0.8);
-  }
-}
+ }
 
 .order-button {
-  background: linear-gradient(to top right, rgb(64, 117,252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72));
+  background: linear-gradient(to top right, rgb(64, 117, 252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72));
   color: #ffffff;
   font-family: "Fira Sans", Arial, sans-serif;
   border: none;
   border-radius: 45px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .order-button:hover {
-  background-color: #2567C7
+  background-color: #2567C7;
 }
 
 @media (max-width: 640px) {
@@ -246,7 +243,7 @@ a, p, h4 {
     margin-left: 35px;
   }
 
-  li {
+  .menu-item:nth-child(n+2) {
     margin-left: 20px;
   }
 
@@ -256,7 +253,7 @@ a, p, h4 {
   }
 }
 
-h1 {
+.header-title {
   font-family: "Borsok", Arial, sans-serif;
   color: rgba(73, 72, 72, 0.8);
   font-size: 2em;
@@ -265,10 +262,12 @@ h1 {
 .title {
   font-family: "Borsok", Arial, sans-serif;
   color: rgba(73, 72, 72, 0.8);
-  font-size: 1.8em ;
+  font-size: 1.8em;
 }
 
-h3 {
+.beginning-title,
+.advantages-title,
+.subscribe-title {
   font-family: "Fira Sans", Arial, sans-serif;
   color: rgba(73, 72, 72, 0.8);
 }
@@ -281,11 +280,11 @@ h3 {
 
 .about {
   position: relative;
- }
+}
 
 
 @media (max-width: 640px) {
-  h1 {
+  .header-title {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -296,7 +295,9 @@ h3 {
     margin-bottom: 20px;
   }
 
-  h3 {
+  .beginning-title,
+  .advantages-title,
+  .subscribe-title {
     font-size: 1.8em;
     margin-bottom: 16px;
   }
@@ -323,14 +324,16 @@ h3 {
 
 
 @media (min-width: 641px) {
-  h3 {
+  .beginning-title,
+  .advantages-title,
+  .subscribe-title {
     font-size: 1.4em;
   }
- }
+}
 
 
 @media (min-width: 641px) and (max-width: 960px) {
-  h1 {
+  .header-title {
     line-height: 40px;
     letter-spacing: 0.4px;
     text-align: left;
@@ -357,12 +360,12 @@ h3 {
     margin-left: auto;
   }
 
-   .text {
-     font-size: 1.3em;
-     line-height: 25px;
-     padding-top: 35px;
-     width: 84%;
-   }
+  .text {
+    font-size: 1.3em;
+    line-height: 25px;
+    padding-top: 35px;
+    width: 84%;
+  }
 
   .tel-number {
     display: none;
@@ -370,21 +373,22 @@ h3 {
 }
 
 .content {
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
+  /*max-width: 1440px;*/
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
 }
 
-@media (min-width: 1920px) {
-  .content {
-    width: 1440px;
+@media (min-width: 1441px) {
+  .wrapper-section {
+    max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+    box-sizing: border-box;
   }
 }
 
 @media (min-width: 961px) {
-  h1 {
+  .header-title {
     color: rgba(73, 72, 72, 0.8);
     line-height: 70px;
     letter-spacing: 0.4px;
@@ -393,7 +397,7 @@ h3 {
     margin-bottom: 5%;
   }
 
-  .about {
+  .about .wrapper-section {
     padding: 70px 80px 90px;
     position: relative;
     font-size: 25px;
@@ -404,7 +408,7 @@ h3 {
   }
 
 
-   .wrapper-about-text {
+  .wrapper-about-text {
     display: flex;
   }
 
@@ -414,14 +418,15 @@ h3 {
     padding-top: 50px;
   }
 
-  .image {
+  .beginning-picture {
     order: 3;
   }
 
-  .beginning-image {
-    position: absolute;
-    right: 80px;
-    top: 70px;
+  .wrapper-beginning-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1000px;
   }
 
   .wrapper-beginning-text {
@@ -485,7 +490,7 @@ h3 {
     margin-top: 4px;
   }
 
-   .card:last-child .card-description {
+  .card:last-child .card-description {
     width: 55%;
     margin-right: auto;
     margin-left: auto;
@@ -521,7 +526,7 @@ h3 {
 }
 
 @media (min-width: 961px) {
-  .products {
+  .products .wrapper-section {
     padding: 70px 35px 90px;
     font-size: 25px;
   }
@@ -569,7 +574,7 @@ h3 {
     margin-right: auto;
     margin-left: auto;
     width: 56%;
-   }
+  }
 
   .facts-preview {
     width: 192px;
@@ -625,7 +630,7 @@ h3 {
     width: 83%;
   }
 
-   .wrapper-fact {
+  .wrapper-fact {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -644,7 +649,7 @@ h3 {
     padding-right: 27px;
   }
 
-  .facts {
+  .facts .wrapper-section {
     position: relative;
     padding-top: 70px;
     padding-bottom: 90px;
@@ -720,21 +725,21 @@ h3 {
     font-size: 10px;
   }
 
-   .step {
+  .step {
     background-color: #ffffff;
     border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 20px;
   }
 
-   .step:nth-child(n+2) {
-     margin-top: 30px;
-   }
+  .step:nth-child(n+2) {
+    margin-top: 30px;
+  }
 
-   .step-title {
-     font-size: 1.8em;
-     font-weight: bold;
-     margin-bottom: 20px;
+  .step-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 
   .step-icon {
@@ -803,7 +808,7 @@ h3 {
 }
 
 @media (min-width: 961px) {
-  .steps {
+  .steps .wrapper-section {
     padding: 70px 50px 90px;
     font-size: 25px;
   }
@@ -822,7 +827,7 @@ h3 {
     width: 23%;
   }
 
-   .step-title {
+  .step-title {
     font-size: 1em;
     font-weight: bold;
     letter-spacing: 0.2px;
@@ -865,20 +870,18 @@ h3 {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 15px;
-   }
+  }
 
   .feedback-text {
     font-size: 1.6em;
     line-height: 25px;
     text-align: center;
-   }
+  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
   .feedbacks {
-    padding-top: 50px;
-    padding-bottom: 70px;
-    padding-left: 15px;
+    padding: 50px 15px 70px;
     font-size: 14px;
   }
 
@@ -906,15 +909,13 @@ h3 {
 }
 
 @media (min-width: 961px) {
-  .feedbacks {
-    padding-top: 70px;
-    padding-bottom: 90px;
-    padding-left: 80px;
+  .feedbacks .wrapper-section {
+    padding: 70px 80px 90px;
     font-size: 25px;
   }
 
   .feedback {
-    width: 32%;
+    width: 34%;
   }
 
   .wrapper-feedbacks {
@@ -943,7 +944,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
- }
+}
 
 .advantages::after {
   content: "";
@@ -980,7 +981,7 @@ h3 {
   }
 
   .advantages-title {
-     font-weight: bold;
+    font-weight: bold;
   }
 
   .advantage-name {
@@ -1084,18 +1085,20 @@ h3 {
 
 
 @media (min-width: 961px) {
-
   .advantages {
     background-image: url(img/background1440.jpg);
-    min-height: 612px;
-    padding: 70px 110px 90px;
     font-size: 17px;
+  }
+
+  .advantages .wrapper-section {
+    position: relative;
+    padding: 70px 110px 90px;
   }
 
   .advantages-title {
     font-weight: bold;
     margin-bottom: 90px;
-    }
+  }
 
   .advantage-name {
     font-size: 1.5em;
@@ -1186,17 +1189,17 @@ h3 {
 }
 
 .form-row:focus {
-   box-shadow: 0 0 3px #0000ff;
+  box-shadow: 0 0 3px #0000ff;
 }
 
 .subscribe-button {
   border: none;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 45px;
   cursor: pointer;
   color: #ffffff;
-  background-color:#DEEAFF;
-  background: linear-gradient(to top right, rgb(64, 117,252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72))
+  background-color: #DEEAFF;
+  background: linear-gradient(to top right, rgb(64, 117, 252), rgba(58, 112, 250, 0.49), rgba(54, 109, 249, 0.51), rgba(50, 105, 248, 0.58), rgba(43, 100, 246, 0.56), rgba(41, 98, 245, 0.72))
 }
 
 @media (max-width: 640px) {
@@ -1240,18 +1243,35 @@ h3 {
     margin-bottom: 32px;
   }
 
+  .subscribe-form {
+    width: 310px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .form-row {
     width: 310px;
     height: 45px;
     box-sizing: border-box;
+    padding-right: 24px;
     padding-left: 24px;
     font-size: 1.9em;
   }
 
- .subscribe-hint:nth-child(n+2) .form-row {
+  .subscribe-hint:nth-child(n+2) .form-row {
     margin-top: 26px;
   }
- }
+
+  .subscribe-button {
+    display: block;
+    width: 150px;
+    height: 44px;
+    font-size: 1.8em;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 .visually-hidden {
   position: absolute;
@@ -1262,18 +1282,6 @@ h3 {
 
 .subscribe-button:hover {
   background-color: #2567C7;
-}
-
-@media (max-width: 640px) {
-  .subscribe-button {
-    display: block;
-    width: 150px;
-    height: 44px;
-    font-size: 1.8em;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -1309,12 +1317,12 @@ h3 {
   }
 
   .subscribe-description {
-    width: 34%;
+    width: 40%;
     font-size: 1.8em;
     line-height: 22px;
   }
 
-  .wrapper-check:nth-child(n+4) {
+  .wrapper-check:nth-child(n+2) {
     margin-top: 16px;
   }
 
@@ -1329,6 +1337,7 @@ h3 {
     width: 100%;
     height: 58px;
     box-sizing: border-box;
+    padding-right: 20px;
     padding-left: 20px;
     font-size: 1.8em;
   }
@@ -1348,8 +1357,14 @@ h3 {
   }
 }
 
+@media (max-width: 960px) {
+  .wrapper-check {
+    justify-content: center;
+  }
+}
+
 @media (min-width: 961px) {
-  .subscribe {
+  .subscribe .wrapper-section {
     padding: 70px 125px 90px;
     font-size: 11px;
   }
@@ -1395,13 +1410,14 @@ h3 {
   }
 
   .subscribe-form {
-     width: 50%;
+    width: 50%;
   }
 
   .form-row {
     width: 480px;
     height: 60px;
     box-sizing: border-box;
+    padding-right: 30px;
     padding-left: 30px;
     font-size: 2em;
   }
@@ -1433,6 +1449,10 @@ h3 {
   fill: #ffffff;
 }
 
+.footer-icon:hover {
+  fill: #2567C7;
+}
+
 .wrapper-footer-icons {
   display: flex;
   justify-content: space-between;
@@ -1444,7 +1464,6 @@ h3 {
   display: block;
   color: #494848;
 }
-
 
 
 @media (max-width: 640px) {
@@ -1478,7 +1497,7 @@ h3 {
     font-size: 9px;
   }
 
-   .wrapper-footer-icons {
+  .wrapper-footer-icons {
     width: 30%;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -1489,18 +1508,17 @@ h3 {
     height: 24px;
   }
 
-   .footer-text {
-     font-size: 1.8em;
+  .footer-text {
+    font-size: 1.8em;
   }
 }
 
 @media (min-width: 961px) {
-  .main-footer {
+  .main-footer .wrapper-section {
     padding-top: 60px;
     padding-bottom: 23px;
     font-size: 15px;
   }
-
 
 
   .wrapper-footer-icons {
