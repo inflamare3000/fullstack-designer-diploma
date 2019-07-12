@@ -85,7 +85,7 @@ a, p, h4 {
 @media (min-width: 641px) and (max-width: 960px) {
   .main-header {
     min-height: 460px;
-    background-image: url(img/header-img7681.jpg);
+    background-image: url(img/header-img768.jpg);
     background-position: right bottom;
     background-size: cover;
     padding-top: 15px;
